@@ -1,0 +1,71 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+
+
+{% block body %}
+<div id="profile">
+<h1>Profile</h1>
+<div class="profile-container">
+    <h2 id="name">{{name}}</h2>
+    <div id="number-follower">
+        <h3 id="numberer" >Number of follower : <span id="getnumber">{{number}}</span> </h3>
+        {% if followed == True %}
+        <input type="submit" value="Unfollow" id="follow">
+        {% else %}
+        <input type="submit" value="Follow" id="follow">
+        {% endif %}
+        
+    </div>
+</div>
+    <div>
+        <h1>All Posts</h1>
+    </div>
+
+<div id="posts">
+    {% for post in page_obj %}
+    <!-- Display information about each post -->
+   <div class="post-container">
+
+    <div class="poster"><a href="{% url 'profile' profilename=post.poster %}"><strong>{{ post.poster }}</strong></a></div>
+    <div class="post-content">{{ post.postContent }}</div>
+    <div class="post-time">{{post.timestamp}}</div>
+   </div>
+    <!-- Add more fields as needed -->
+{% endfor %}
+
+<!-- Add pagination links if needed -->
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+        <button id="first" style="display : none;"><a href="?page=1">&laquo; first</a></button>
+            <button id="previous1" style="display : none;"><a href="?page={{ page_obj.previous_page_number }}">previous</a></button>
+            <button id="previous">previous</button>
+        {% endif %}
+
+        
+
+        {% if page_obj.has_next %}
+        
+        <button id="next1" style="display : none;"><a href="?page={{ page_obj.next_page_number }}">next </a></button>
+        <button id="last" style="display : none;"><a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a></button>
+        <button id="next" >next</button>
+
+        {% endif %}
+        <span class="current page">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+    </span>
+</div>
+
+</div>
+</div>
+
+{% endblock %}
+{% block script %}
+ <script src="{% static 'network/profile.js' %}"></script>
+ <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+ <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+ <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+{% endblock %}

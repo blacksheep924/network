@@ -1,0 +1,159 @@
+h1{
+  margin-left: 10px;
+  color:aliceblue;
+}
+body {
+  background: rgb(137, 137, 238);
+}
+
+
+.newPost {
+  margin-left: 10px;
+  border: solid rgb(201, 197, 197) 1px;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: auto;
+  margin-right: 20px;
+}
+
+.newPost input[type="submit"],
+.newPost button {
+    background-color: rgb(48, 110, 202);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.newPost textarea {
+    width: 100%;
+    height: 75px;
+    border-radius: 5px;
+}
+
+button{
+
+  background-color: rgb(48, 110, 202);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+a:link, a:visited, a:hover, a:active { color: rgb(255, 255, 255) }
+
+.post-container{
+  margin-left: 10px;
+  border: solid rgb(201, 197, 197) 1px;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: auto;
+  margin-right: 20px;
+  margin-top: 10px;
+  background: white;
+
+
+}
+
+.post-container a:link,
+.post-container a:visited {
+  color: rgb(0, 0, 0);
+}
+
+.post-container a:hover,
+.post-container a:active {
+  color: black;
+}
+
+.poster{
+  border-bottom: solid rgb(48, 110, 202) 3px;
+  
+  border-top: solid rgb(48, 110, 202) 3px;
+  border-width: 2px;
+  padding: 3px;
+  margin-right: 80%;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+
+.post-content{
+
+border: solid rgb(48, 110, 202) 1px;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: auto;
+  margin-top: 10px;
+  
+}
+
+.page{
+  
+  background: rgb(63, 61, 61);
+  margin-left: 20px;
+  border-radius: 5px;
+  padding: 6px;
+  color: white;
+}
+
+.profile-container{
+  margin-left: 10px;
+  margin-right: 60%;
+  background: white;
+  border-radius: 5px;
+  padding-top:10px;
+  border: solid white 2px;
+  
+}
+
+.profile-container #name {
+  
+  padding: 10px;
+  margin-right: 50%;
+  
+  
+  
+  
+  
+ 
+  
+
+  
+  
+
+}
+
+.profile-container #number-follower {
+  padding: 10px;
+  border-top: solid rgb(137, 137, 238) 5px;
+  
+  
+  
+
+}
+
+.profile-container #number-follower input[type="submit"]{
+  
+  color: white;
+  background: rgb(48, 110, 202) ;
+    
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    
+    
+  
+}
+
+.navbar-brand{
+  font-size: 72px;
+  border: solid rgb(137, 137, 238) 2px ;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
